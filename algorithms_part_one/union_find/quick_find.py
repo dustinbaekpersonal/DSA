@@ -6,12 +6,14 @@ class QuickFind:
         self.array = list(range(n))
     
     def union(self, num_one: int, num_two: int) -> None:
-        """
+        """Eager approach.
+        Change all the items in the array to root (second item).
+
         if n = 10,
         
-        union(3,4) -> [0, 1, 2, 3, 3, 5, 6, 7, 8, 9]
-        union(3,8) -> [0, 1, 2, 3, 3, 5, 6, 7, 3, 9]
-        union(2,8) -> [0, 1, 2, 2, 2, 5, 6, 7, 2, 9] 
+        union(3,4) -> [0, 1, 2, 4, 4, 5, 6, 7, 8, 9]
+        union(3,8) -> [0, 1, 2, 8, 8, 5, 6, 7, 8, 9]
+        union(2,8) -> [0, 1, 8, 8, 8, 5, 6, 7, 8, 9] 
         """
         #### My Solution ####
         # num_one = self.array[num_one]

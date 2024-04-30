@@ -1,6 +1,6 @@
 """Python implementation of Weighted Quick Union with path compression."""
 
-class WeightedQuickUnion:
+class WeightedQuickUnionPathCompression:
     """We have to keep track of the size of each tree."""
     def __init__(self, n: int):
         self.array = list(range(n))
@@ -64,28 +64,28 @@ class WeightedQuickUnion:
         
         
 if __name__ == "__main__":
-    wqu = WeightedQuickUnion(10)
-    # print("Before", wqu.array)
-    # wqu.union(3,4)
-    # wqu.union(3,8)
-    # wqu.union(2,8)
-    # wqu.union(0,1)
-    # wqu.union(0,4)
-    # print("After", wqu.array)
-    # assert wqu.connected(0,8) == True
-    # assert wqu.connected(3,1) == True
-    # assert wqu.connected(0,9) == False
+    wqupc = WeightedQuickUnionPathCompression(10)
+    # print("Before", wqupc.array)
+    # wqupc.union(3,4)
+    # wqupc.union(3,8)
+    # wqupc.union(2,8)
+    # wqupc.union(0,1)
+    # wqupc.union(0,4)
+    # print("After", wqupc.array)
+    # assert wqupc.connected(0,8) == True
+    # assert wqupc.connected(3,1) == True
+    # assert wqupc.connected(0,9) == False
     
-    wqu.union(4, 3)       
-    wqu.union(3, 8)                
-    wqu.union(6, 5)       
-    wqu.union(9, 4)
-    wqu.union(2, 1)
-    wqu.union(5, 0)
-    wqu.union(7, 2)
-    wqu.union(6, 1)
-    wqu.union(7, 3)
-    assert wqu.array == [5, 1, 1, 1, 3, 1, 5, 1, 3, 3], f"array is {wqu.array}"
+    wqupc.union(4, 3)       
+    wqupc.union(3, 8)                
+    wqupc.union(6, 5)       
+    wqupc.union(9, 4)
+    wqupc.union(2, 1)
+    wqupc.union(5, 0)
+    wqupc.union(7, 2)
+    wqupc.union(6, 1)
+    wqupc.union(7, 3)
+    assert wqupc.array == [5, 1, 1, 1, 3, 1, 5, 1, 3, 3], f"array is {wqupc.array}"
     # """
     #         1
     #     /  | \   \
@@ -93,5 +93,5 @@ if __name__ == "__main__":
     #     / / |  | \
     #    9 8  4  0  6
     # """
-    assert wqu.connected(0, 7) == True
-    assert wqu.connected(8, 9) == True
+    assert wqupc.connected(0, 7) == True
+    assert wqupc.connected(8, 9) == True

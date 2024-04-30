@@ -75,12 +75,12 @@ if __name__ == "__main__":
     wqu.union(6, 1)
     wqu.union(7, 3)
     assert wqu.array == [5, 1, 1, 1, 3, 1, 5, 1, 3, 3], f"array is {wqu.array}"
-    """
-            1
-        /  | \   \
-       2   3  5   7
-        / / |  | \
-       9 8  4  0  6
-    """
+    # """
+    #         1
+    #     /  | \   \
+    #    2   3  5   7
+    #     / / |  | \
+    #    9 8  4  0  6
+    # """
     assert wqu.connected(0, 7) == True
     assert wqu.connected(8, 9) == True

@@ -12,8 +12,8 @@ def binary_search(array: list, num: int) -> bool:
     """
     lo, hi = 0, len(array) - 1
     while lo <= hi:
-        # mid = (lo + hi) // 2
-        mid = int(lo + (hi - lo) / 2)
+        mid = (lo + hi) // 2
+        # mid = int(lo + (hi - lo) / 2)
         print(mid)
         if array[mid] < num:
             lo = mid + 1
@@ -26,6 +26,6 @@ def binary_search(array: list, num: int) -> bool:
 
 array = [1, 3, 6, 10, 30]
 num = 2
-
+ 
 res = binary_search(array, num)
 print(res)
